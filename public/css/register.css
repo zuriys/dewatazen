@@ -1,0 +1,221 @@
+:root {
+    --primary: #1b4a30;
+    --bg: #ffffff;
+    --button-orange: #f57c00;
+    --button-hover: #e57300;
+    --white: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg);
+    background-image: url("/assets/daftar.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Bagian Kiri (Selamat Datang) */
+  .welcome-container {
+    flex: 1;
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .welcome-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .welcome-container p {
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .welcome-container .btn-masuk {
+    padding: 10px 20px;
+    border: 2px solid var(--button-orange);
+    background-color: transparent;
+    color: var(--button-orange);
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .welcome-container .btn-masuk:hover {
+    background-color: var(--button-orange);
+    color: var(--white);
+  }
+  
+  /* Bagian Kanan (Buat Akun) */
+  .register-container {
+    flex: 1;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .register-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: black;
+  }
+  
+  .register-container p {
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  
+  .register-container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .register-container .btn-buat {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: var(--button-orange);
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .register-container .btn-buat:hover {
+    background-color: var(--button-hover);
+  }
+  
+  .register-container a {
+    color: var(--button-orange);
+    text-decoration: none;
+  }
+  
+  .register-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .register-container .feather {
+    stroke-width: 1.5;
+    color: #1b4a30;
+  }
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .feature-icon:hover {
+    background-color: var(--primary);
+  }
+  
+  .feather:hover {
+    color: #fff;
+  }
+  
+  /* Responsive Styling */
+  
+  /* Untuk Tablet (max-width: 768px) */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+      box-shadow: none;
+    }
+  
+    .welcome-container,
+    .register-container {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .welcome-container h2,
+    .register-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .register-container input,
+    .register-container .btn-buat {
+      max-width: 100%;
+    }
+  }
+  
+  /* Untuk Ponsel (max-width: 480px) */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+  
+    .welcome-container h2,
+    .register-container h2 {
+      font-size: 1.6rem;
+    }
+  
+    .welcome-container p,
+    .register-container p {
+      font-size: 0.9rem;
+    }
+  
+    .register-container input,
+    .register-container .btn-buat {
+      padding: 8px;
+    }
+  }
+  

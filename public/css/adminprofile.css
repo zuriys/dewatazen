@@ -1,0 +1,268 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* General Layout */
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b4a30;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f9f9f9;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .notif .feather {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+  }
+  
+  .notif .feather:hover {
+    fill: black;
+    stroke-width: 0;
+  }
+  
+  .navbar-extra {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .notif {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .profile-pic {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+  }
+  
+  .profile-info h1 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  
+  .profile-info h2 {
+    font-size: 1rem;
+    font-family: Inter;
+    font-weight: 100;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 250px;
+    background-color: #23603e;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    overflow-y: auto;
+    z-index: 999;
+  }
+  
+  .sidebar h2 {
+    font-size: 22px;
+    color: #f8c15c;
+    margin: 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 1.2rem;
+  }
+  
+  .sidebar ul li {
+    margin: 1rem 0;
+  }
+  
+  .sidebar ul li .feather {
+    margin-right: 10px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #256f46;
+    font-weight: 700;
+  }
+  
+  /* Main Content Styling */
+  .profile-section {
+    margin-left: 20rem;
+    margin-top: 3rem;
+    padding: 80px 20px;
+    flex: 1;
+  }
+  
+  .profile-section h2 {
+    font-size: 24px;
+    color: #1b4a30;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  form {
+    width: 60%;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .update-button {
+    background-color: #e57300;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-button:hover {
+    background-color: #145b24;
+  }
+  
+  .avatar-section {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .avatar-box {
+    text-align: center;
+  }
+  
+  .avatar-icon {
+    font-size: 80px;
+    color: #f57c00;
+    margin-bottom: 10px;
+  }
+  
+  .change-avatar {
+    padding: 10px 15px;
+    background-color: #f57c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .change-avatar:hover {
+    background-color: #23603e;
+  }
+  
+  /* dasboard */
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  .card .status {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .card .status .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .card .status span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

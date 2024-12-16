@@ -1,0 +1,641 @@
+:root {
+  --primary: #1b4a30;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+  color: #000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #000000;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #000000;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.search-bar {
+  background-color: #ff7900;
+  /* padding: 20px; */
+  padding-left: 650px;
+  padding-right: 650px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -385px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.btn-search {
+  background-color: #1b4a30;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-search:hover {
+  background-color: #145022;
+}
+
+
+/* pertama */
+.pertama .profile-section {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  display: block;
+}
+
+.text-overlay {
+  background-color: #2d5a3c;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.pertama .text-overlay h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.pertama .text-overlay h1 {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* kedua */
+.Kedua {
+  padding: 8rem 7% 1.4rem;
+}
+
+.Kedua .row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Kedua .row .about-img {
+  flex: 1 1 45%;
+}
+
+.Kedua .row .about-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.Kedua .row .content {
+  flex: 1 1 55%;
+  padding: 0 1rem;
+}
+
+.Kedua h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #2f5a41;
+}
+
+.Kedua .row .content p {
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* ketiga */
+.Ketiga {
+  padding: 8rem 7% 1.4rem;
+}
+
+.Ketiga .row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Ketiga .row .about-img {
+  flex: 1 1 45%;
+  order: 2;
+}
+
+.Ketiga .row .about-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.Ketiga .row .content {
+  flex: 1 1 55%;
+  padding: 0 1rem;
+  order: 1;
+}
+
+.Ketiga h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #2f5a41;
+}
+
+.Ketiga .row .content p {
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* stats */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 7%;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  min-width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2f5a41;
+  margin-bottom: 0.8rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #2f5a41;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  display: inline-block;
+  text-align: center;
+  min-width: 150px;
+}
+
+/* kontak */
+.contact-section {
+  background-color: #2f5a41;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.contact-title {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: scale(1.02);
+}
+
+/* Laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  .Kedua {
+    padding: 6rem 7% 1.4rem;
+  }
+
+  .Kedua h2 {
+    font-size: 4rem;
+  }
+
+  .Ketiga {
+    padding: 6rem 7% 1.4rem;
+  }
+
+  .Ketiga h2 {
+    font-size: 4rem;
+  }
+
+  .contact-section {
+    margin: 2rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #1b4a30;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .Kedua {
+    padding: 4rem 4% 1.4rem;
+  }
+
+  .Kedua h2 {
+    font-size: 3rem;
+  }
+
+  .Kedua .row {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .Kedua .row .about-img {
+    flex: 1 1 100%;
+  }
+
+  .Kedua .row .content {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .Kedua .row .content p {
+    font-size: 1.1rem;
+  }
+
+  .Ketiga {
+    padding: 4rem 4% 1.4rem;
+  }
+
+  .Ketiga h2 {
+    font-size: 3rem;
+  }
+
+  .Ketiga .row {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .Ketiga .row .about-img {
+    flex: 1 1 100%;
+  }
+
+  .Ketiga .row .content {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .Ketiga .row .content p {
+    font-size: 1.1rem;
+  }
+
+  .contact-section {
+    padding: 3rem 1.5rem;
+    margin: 1.5rem;
+  }
+
+  .contact-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer div {
+  max-width: 300px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.5rem;
+}
+
+.footer p {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.footer .feather {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+  font-size: 1.2rem;
+}
+
+.footer a:hover {
+  color: #ff7f00;
+}
+
+.footer .logo {
+  text-align: center;
+}
+
+.footer .logo img {
+  width: 250px;
+  margin-bottom: 1rem;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #000;
+  padding: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .copyright {
+    font-size: 0.9rem;
+    padding: 0.8rem 0;
+  }
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer div {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer .logo img {
+    width: 60px;
+  }
+
+  .footer .copyright {
+    margin-top: 1rem;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .Kedua {
+    padding: 3rem 3% 1rem;
+  }
+
+  .Kedua h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .Kedua .row {
+    gap: 1rem;
+  }
+
+  .Kedua .row .content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .Ketiga {
+    padding: 3rem 3% 1rem;
+  }
+
+  .Ketiga h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .Ketiga .row {
+    gap: 1rem;
+  }
+
+  .Ketiga .row .content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-section {
+    padding: 2rem 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    gap: 0.8rem;
+  }
+
+  .contact-item {
+    font-size: 0.85rem;
+    padding: 0.7rem 1rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
